@@ -1,4 +1,4 @@
-package com.example.conta.contaapi;
+package com.db1.conta.contaapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
