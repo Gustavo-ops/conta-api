@@ -1,25 +1,26 @@
 package com.example.conta.contaapiTest;
+
 import java.util.List;
 
 import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.bd1.conta.contaapiTest.AgenciaRepository;
-import com.bd1.conta.contaapiTest.CidadeRepository;
 import com.db1.conta.contaapi.domain.entity.Agencia;
 import com.db1.conta.contaapi.domain.entity.Cidade;
 import com.db1.conta.contaapi.domain.entity.Estado;
+import com.db1.conta.contaapiTest.AgenciaRepository;
+import com.db1.conta.contaapiTest.CidadeRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 
 public class AgenciaRepositoryTest {
+	
 	@Autowired
 	private AgenciaRepository agenciaRepository;
 	
@@ -28,7 +29,6 @@ public class AgenciaRepositoryTest {
 	
 	@After
 	public void afterTest() {
-		agenciaRepository.deleteAll();
 		cidadeRepository.deleteAll();
 	}
 	
@@ -64,9 +64,7 @@ public class AgenciaRepositoryTest {
 		Cidade cidade = cidadeRepository.save(new Cidade("Maringá", Estado.PR));
 		Agencia agencia = new Agencia("6544", "2", cidade);
 		agenciaRepository.save(agencia);
-		
 		List<Agencia> agencias = agenciaRepository.findByCidadeEstado(Estado.PR);
-		
 		Assert.assertEquals(1, agencias.size());
 		
 	}

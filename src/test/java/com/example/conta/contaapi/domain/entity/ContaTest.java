@@ -94,4 +94,5 @@ public class ContaTest {
 //		Assert.assertEquals(13.0, conta.getSaldo());
 		Assert.assertEquals(cliente, conta.getCliente());
 
+	}
 }

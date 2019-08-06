@@ -1,4 +1,4 @@
-package com.bd1.conta.contaapiTest;
+package com.db1.conta.contaapiTest;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,6 +14,10 @@ public class ClienteRepository {
 		return null;
 	}
 	Cliente findByCpf(String cpf) {
+		return null;
+	}
+	public Cliente save(Cliente cliente) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

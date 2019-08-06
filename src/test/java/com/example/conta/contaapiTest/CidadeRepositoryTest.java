@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.bd1.conta.contaapiTest.CidadeRepository;
 import com.db1.conta.contaapi.domain.entity.Cidade;
 import com.db1.conta.contaapi.domain.entity.Estado;
+import com.db1.conta.contaapiTest.CidadeRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
